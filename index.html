@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Jake's Weather App</title>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
+        <!-- <link rel="stylesheet" type="text/css" href="./assets/css/style.css" /> -->
+    </head>
+    <body>
+        <header>
+            <h1>Jake's Weather App</h1>
+        </header>
+        <main>
+            <section>
+                <div class="w3-container">
+                    <h2>Search weather forecast by city</h2>
+                </div>
+                <form id="search" class="w3-container">
+                    <input type="text" id="searchInput" class="w3-input w3-border w3-hover-grey" placeholder="City">
+                    <button type="submit" class="w3-button w3-border w3-border-grey">submit</button>
+                </form>
+            </section>
+            <section id="stats" style="display:none;">
+                <div>
+                    <h2>Current Weather Conditions</h2>
+                    <p id="location"></p> <p id="state"></p>
+                </div>
+                <div>
+                    <p id="condition"></p>
+                     <img id="img" alt="Current Conditions Image" src="">
+                </div>
+                <div>
+                    <h3>Current Temperature</h3>
+                    <p id="temp"></p> <p>F</p>
+                </div>
+                <div>
+                    <h3>Feels Like</h3>
+                    <p id="feels"></p> <p>F</p>
+                </div>
+                <div>
+                    <h3>Humidity</h3>
+                    <p id="humid"></p> <P>%</P>
+                </div>
+                <div>
+                    <h3>Wind</h3>
+                    <p id="windDir"></p>
+                    <p id="windSpeed"></p> <p>MPH</p>
+                </div>
+            </section>
+
+        </main>
+        <script src="./assets/script.js"></script>
+    </body>
+</html>
