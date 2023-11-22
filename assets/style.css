@@ -111,3 +111,21 @@ h2 {
 #space5 {
     width: 10%;
 }
+
+#day1 {
+    width: 14.28%;
+}
+
+#day2 {
+    width: 14.28%;
+}
+
+#day3 {
+    width: 14.28%;
+}
+
+#forecast {
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
