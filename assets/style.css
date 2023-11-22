@@ -1,6 +1,6 @@
 body {
     /* background-image: url('back.png'); */
-    background-color: #eee9da;
+    background-color: #27374d;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -15,21 +15,38 @@ h2 {
     text-shadow: 2px 2px slategray;
     font-style: italic;
 }
+h3 {
+    font-family: Geneva, Verdana, sans-serif;
+    font-size: 1.6vw;
+    font-weight: 500;
+}
+
+h4 {
+    font-family: Geneva, Verdana, sans-serif;
+    font-size: 1.6vw;
+    font-weight: 500;
+}
+
+a {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5vw;
+    font-weight: 200;
+}
 
 .blue {
-    background-color: #6096b4;
+    background-color: #9db2bf;
 }
 
 .lightBlue {
-    background-color: #93bfcf;
+    background-color: #27496d;
 }
 
 .grey {
-    background-color: #bdcdd6;
+    background-color: #dde6ed;
 }
 
 .white {
-    background-color: #eee9da;
+    background-color: #00a8cc;
 }
 
 #search {
@@ -113,19 +130,40 @@ h2 {
 }
 
 #day1 {
-    width: 14.28%;
+    width: 18.28%;
 }
 
 #day2 {
-    width: 14.28%;
+    width: 18.28%;
 }
 
 #day3 {
-    width: 14.28%;
+    width: 18.28%;
 }
 
 #forecast {
     margin-top: 5%;
     margin-left: 5%;
     margin-right: 5%;
+    padding-bottom: 5%;
+}
+
+#forecastSpace1 {
+    width: 11.28%;
+}
+
+#forecastSpace2 {
+    width: 11.28%;
+}
+
+#forecastSpace3 {
+    width: 11.28%;
+}
+
+#forecastSpace4 {
+    width: 11.28%;
+}
+
+#forecastTitle {
+    padding-bottom: 5%;
 }
