@@ -17,7 +17,7 @@ var weatherAPI = function (city) {
             var imgPath = res.current.condition.icon;
             var temp = document.getElementById("temp");
             var feels = document.getElementById("feels");
-            var humid = document.getElementById("humid");
+            // var humid = document.getElementById("humid");
             var windDir = document.getElementById("windDir");
             var windSpeed = document.getElementById("windSpeed");
             location.textContent = res.location.name;
@@ -26,7 +26,7 @@ var weatherAPI = function (city) {
             imgElem.src = "." + imgPath;
             temp.textContent = res.current.temp_f;
             feels.textContent = res.current.feelslike_f;
-            humid.textContent = res.current.humidity;
+            // humid.textContent = res.current.humidity;
             windDir.textContent = res.current.wind_dir;
             windSpeed.textContent = res.current.wind_mph;
 

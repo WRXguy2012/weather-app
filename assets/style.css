@@ -1,3 +1,4 @@
+
 body {
     /* background-image: url('back.png'); */
     background-color: #27374d;
@@ -27,11 +28,11 @@ h4 {
     font-weight: 500;
 }
 
-a {
+/* a {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1.5vw;
     font-weight: 200;
-}
+} */
 
 .blue {
     background-color: #9db2bf;
@@ -64,30 +65,31 @@ a {
 
 #stats {
     margin-top: 5%;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 12%;
+    margin-right: 12%;
 }
 
 #current {
-    font-size: 1.5vw;
     font-family: Geneva, Verdana, sans-serif;
+    font-size: 3vw;
+    font-weight: 400;
+    width: 50%;
+    padding-left: 2%;
 }
 
 #condition {
-    font-size: 2vw;
+    font-size: 2.5vw;
     font-family: Geneva, Verdana, sans-serif;
 }
 
 #img {
-    width: 75%;
-    padding-top: 2% ;
+    width: 20%;
+    height: auto;
 }
 
 #conditionImg {
-    margin-left: 40%;
-    margin-right: 40%;
-    margin-bottom: 5%;
-    margin-top: 5%;
+    width: 50%;
+    padding-top: 0.8%;
 }
 
 #currentInfo {
@@ -106,7 +108,9 @@ a {
 }
 
 #wind {
-    width: 12.5%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.4vw;
+    font-weight: 200;
 }
 
 #space1 {
@@ -166,4 +170,17 @@ a {
 
 #forecastTitle {
     padding-bottom: 5%;
+}
+
+#tempLine {
+    padding-left: 50%;
+    font-size: 2.5vw;
+    font-weight: 300;
+}
+
+#feelsLike {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.4vw;
+    font-weight: 200;
+    padding-left: 46%;
 }
