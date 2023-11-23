@@ -103,6 +103,7 @@ var forecastAPI = function (city) {
 var showStats = function () {
     document.getElementById('stats').style.display = "block";
     document.getElementById('forecast').style.display = "block";
+    document.getElementById('today').style.display = "block";
 }
 
 // button event
