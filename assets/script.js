@@ -1,6 +1,16 @@
 var key = '65356c91893745839f8235534231811';
 var search = document.getElementById('search');
 
+//function to show hourly forecast dropdown
+function hourly(id) {
+    var x = document.getElementById(id);
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+
 // function to call current conditions api
 var weatherAPI = function (city) {
     var requestURL = "http://api.weatherapi.com/v1/current.json?&key=" + key + "&q=" + city;
@@ -35,7 +45,7 @@ var weatherAPI = function (city) {
 
 // function to call forecast api
 var forecastAPI = function (city) {
-    var forecastURL = "http://api.weatherapi.com/v1/forecast.json?&key=" + key + "&q=" + city + "&days=3";
+    var forecastURL = "http://api.weatherapi.com/v1/forecast.json?&key=" + key + "&q=" + city + "&days=5";
     fetch(forecastURL)
     .then(function (response) {
         return response.json();
@@ -43,7 +53,7 @@ var forecastAPI = function (city) {
     .then(function (res) {
         console.log(res);
         //todays info
-        var date1 = document.getElementById("date1");
+        // var date1 = document.getElementById("date1");
         var img1 = document.getElementById('img1');
         var condition1 = document.getElementById('condition1');
         var minTemp1 = document.getElementById('minTemp1');
@@ -51,15 +61,55 @@ var forecastAPI = function (city) {
         var rain1 = document.getElementById('rain1');
         var sunrise1 = document.getElementById('sunrise1');
         var sunset1 = document.getElementById("sunset1");
+        var uv1 = document.getElementById('uv1');
         var img1Path = res.forecast.forecastday[0].day.condition.icon;
-        date1.textContent = res.forecast.forecastday[0].date;
+        // date1.textContent = res.forecast.forecastday[0].date;
         img1.src = "." + img1Path;
-        condition1.textcontent = res.forecast.forecastday[0].day.condition.text;
+        condition1.textContent = res.forecast.forecastday[0].day.condition.text;
         minTemp1.textContent = res.forecast.forecastday[0].day.mintemp_f;
         maxtemp1.textContent = res.forecast.forecastday[0].day.maxtemp_f;
         rain1.textContent = res.forecast.forecastday[0].day.daily_chance_of_rain;
         sunrise1.textContent = res.forecast.forecastday[0].astro.sunrise;
         sunset1.textContent = res.forecast.forecastday[0].astro.sunset;
+        uv1.textContent = res.forecast.forecastday[0].day.uv;
+
+        // Hourly info
+        var hourImg1 = document.getElementById('hourImg1');
+        var hourCondition1 = document.getElementById('hourCondition1');
+        var hourTemp1 = document.getElementById('hourTemp1');
+        var hourWindDir1 = document.getElementById('hourWindDir1');
+        var hourWindSpeed1 = document.getElementById('hourWindSpeed1');
+        var hourImg1Path = res.forecast.forecastday[0].hour[1].condition.icon;
+        hourImg1.src = "." + hourImg1Path;
+        hourCondition1.textContent = res.forecast.forecastday[0].hour[1].condition.text;
+        hourTemp1.textContent = res.forecast.forecastday[0].hour[1].temp_f;
+        hourWindDir1.textContent = res.forecast.forecastday[0].hour[1].wind_dir;
+        hourWindSpeed1.textContent = res.forecast.forecastday[0].hour[1].wind_mph;
+
+        var hourImg2 = document.getElementById('hourImg2');
+        var hourCondition2 = document.getElementById('hourCondition2');
+        var hourTemp2 = document.getElementById('hourTemp2');
+        var hourWindDir2 = document.getElementById('hourWindDir2');
+        var hourWindSpeed2 = document.getElementById('hourWindSpeed2');
+        var hourImg2Path = res.forecast.forecastday[0].hour[2].condition.icon;
+        hourImg2.src = "." + hourImg2Path;
+        hourCondition2.textContent = res.forecast.forecastday[0].hour[2].condition.text;
+        hourTemp2.textContent = res.forecast.forecastday[0].hour[2].temp_f;
+        hourWindDir2.textContent = res.forecast.forecastday[0].hour[2].wind_dir;
+        hourWindSpeed2.textContent = res.forecast.forecastday[0].hour[2].wind_mph;
+
+        var hourImg3 = document.getElementById('hourImg3');
+        var hourCondition3 = document.getElementById('hourCondition3');
+        var hourTemp3 = document.getElementById('hourTemp3');
+        var hourWindDir3 = document.getElementById('hourWindDir3');
+        var hourWindSpeed3 = document.getElementById('hourWindSpeed3');
+        var hourImg3Path = res.forecast.forecastday[0].hour[3].condition.icon;
+        hourImg3.src = "." + hourImg3Path;
+        hourCondition3.textContent = res.forecast.forecastday[0].hour[3].condition.text;
+        hourTemp3.textContent = res.forecast.forecastday[0].hour[3].temp_f;
+        hourWindDir3.textContent = res.forecast.forecastday[0].hour[3].wind_dir;
+        hourWindSpeed3.textContent = res.forecast.forecastday[0].hour[3].wind_mph;
+
         //tomorrows info
         var date2 = document.getElementById("date2");
         var img2 = document.getElementById('img2');

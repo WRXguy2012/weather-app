@@ -1,7 +1,7 @@
 
 body {
     /* background-image: url('back.png'); */
-    background-color: #27374d;
+    background-color: #eaeaea;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -11,7 +11,7 @@ body {
 
 h2 {
     font-family: Geneva, Verdana, sans-serif;
-    font-size: 3vw;
+    font-size: 2.8vw;
     font-weight: 400;
     width: 50%;
     padding-left: 2%;
@@ -34,20 +34,34 @@ h4 {
     font-weight: 200;
 } */
 
-.blue {
-    background-color: #9db2bf;
+.headerColor {
+    background-color: #cf6747;
 }
 
-.lightBlue {
-    background-color: #27496d;
+.sectionColor {
+    background-color: #8ba0a4;
 }
 
-.grey {
-    background-color: #dde6ed;
+.dataColor {
+    background-color: #183e4b;
 }
 
-.white {
-    background-color: #00a8cc;
+.hourTime {
+    font-family: Geneva, Verdana, sans-serif;
+    font-size: 1vw;
+    font-weight: 300;
+}
+
+.hourTemp {
+    padding-left: 5%;
+}
+
+.hourImg {
+    padding-left: 2%;
+}
+
+.hourWind {
+    padding-left: 5%;
 }
 
 #search {
@@ -71,7 +85,7 @@ h4 {
 
 #current {
     font-family: Geneva, Verdana, sans-serif;
-    font-size: 3vw;
+    font-size: 2.8vw;
     font-weight: 400;
     width: 50%;
     padding-left: 2%;
@@ -111,6 +125,7 @@ h4 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1.4vw;
     font-weight: 200;
+    padding-left: 9%;
 }
 
 #space1 {
@@ -183,10 +198,91 @@ h4 {
     font-size: 1.4vw;
     font-weight: 200;
     padding-left: 46%;
+    padding-top: 0.6%;
 }
 
 #today {
     margin-top: 5%;
     margin-left: 12%;
     margin-right: 12%;   
+}
+
+#todayTemps {
+    font-family: Geneva, Verdana, sans-serif;
+    font-size: 3vw;
+    font-weight: 400;
+    width: 50%;
+    padding-left: 2%;
+}
+
+#todayImg {
+    width: 50%;
+    padding-top: 0.8%;
+}
+
+#temps1 {
+    font-size: 2.5vw;
+    font-weight: 300;
+    padding-left: 10%;
+}
+
+#img1 {
+    width: 20%;
+    height: auto;
+}
+
+#condition1 {
+    font-size: 2.5vw;
+    font-family: Geneva, Verdana, sans-serif;
+}
+
+#lowHigh {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.4vw;
+    font-weight: 200;
+    padding-left: 10.5%;
+}
+
+#high {
+    padding-left: 44.5%;
+}
+
+#maxTemp1 {
+    padding-left: 30%;
+}
+
+#rainChance {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.4vw;
+    font-weight: 200;
+}
+
+#todaySun {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.4vw;
+    font-weight: 200;
+    padding-top: 1%;
+    padding-left: 7%;
+}
+
+#sunrise1 {
+    font-size: 1vw;
+    padding-right: 9.5%;
+}
+
+#sunset1 {
+    font-size: 1vw;
+    padding-right: 27%;
+}
+
+#uv1 {
+    font-size: 1.2vw;
+}
+
+#rain1 {
+    font-size: 1.2vw;
+}
+
+#percent {
+    font-size: 1.2vw;
 }

@@ -9,7 +9,7 @@
         <link rel="stylesheet" type="text/css" href="./assets/style.css" />
     </head>
     <body>
-        <header class="w3-cell-row blue w3-hide-small">
+        <header class="w3-cell-row headerColor w3-hide-small">
             <div class="w3-container w3-cell">
                 <i class="fa fa-cloud w3-cell"></i>
                 <p id="title" class="w3-center w3-cell">Jake's Weather App</p>
@@ -19,7 +19,7 @@
                     <button type="submit" class="w3-button w3-border w3-round w3-border-grey w3-cell">submit</button>
                 </form>
         </header>
-        <header class="w3-cell-row blue w3-hide-medium w3-hide-large">
+        <header class="w3-cell-row headerColor w3-hide-medium w3-hide-large">
             <form id="search" class="w3-container">
                 <input type="text" id="searchInput" class="w3-input w3-border w3-round w3-light-grey w3-hover-grey w3-cell" placeholder="City" style="width:73%">
                 <button type="submit" class="w3-button w3-border w3-round w3-border-grey w3-cell">submit</button>
@@ -33,7 +33,7 @@
                 </div> -->
                
             </section>
-            <section id="stats"  class="w3-card-4 blue w3-round" style="display:none;">
+            <section id="stats"  class="w3-card-4 sectionColor w3-round" style="display:none;">
                 <div class="w3-row">
                     <div id="current" class="w3-col">
                         <!-- <h2>Current Weather Conditions</h2> -->
@@ -54,23 +54,72 @@
                     </div>
                 </div>
             </section>
-            <section id="today" class="w3-card-4 blue w3-round" style="display: none;">
+            <section id="today" class="w3-card-4 sectionColor w3-round" style="display: none;">
                 <div class="w3-row">
-                    <div class="w3-col">
-                        <h2>Today's Weather</h2>
+                    <div id="todayTemps" class="w3-col">
+                        <h2>Today</h2>
+                        <div id="lowHigh">
+                            <a>Low</a> <a id="high">High</a>
+                        </div>
+                        <div id="temps1">
+                            <a id="minTemp1"></a><a>F</a>
+                            <a id="maxTemp1"></a><a>F</a>
+                        </div>
+                    </div>
+                    <div id="todayImg" class="w3-center w3-col">
+                        <img id="img1" src="" alt="Today's Conditions Image">
+                        <a id="condition1"></a>
+                        <div id="rainChance">
+                            <a>Chance of Rain</a> <a id="rain1"></a><a id="percent">%</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="todaySun">
+                    <a>Sunrise</a> <a id="sunrise1"></a>
+                    <a>Sunset</a> <a id="sunset1"></a>
+                    <a>UV Level</a> <a id="uv1"></a>
+                </div>
+                <div>
+                    <button onclick="hourly('todayHourly')" class="w3-button w3-block w3-left-align w3-topbar w3-border-black">
+                        Hourly Forecast
+                    </button>
+                    <div id="todayHourly" class="w3-hide">
+                        <ul class="w3-ul">
+                            <li>
+                                <a class="hourTime">12:00 AM</a>
+                                <img id="hourImg1" class="hourImg" src="" alt="Condition Image">
+                                <a id="hourCondition1"></a>
+                                <a id="hourTemp1" class="hourTemp"></a><a>F</a>
+                                <a class="hourWind">Wind</a> <a id="hourWindDir1"></a> <a>at</a> <a id="hourWindSpeed1"></a> <a>MPH</a>
+                            </li>
+                            <li>
+                                <a class="hourTime">1:00 AM</a>
+                                <img id="hourImg2" class="hourImg" src="" alt="Condition Image">
+                                <a id="hourCondition2"></a>
+                                <a id="hourTemp2" class="hourTemp"></a><a>F</a>
+                                <a class="hourWind">Wind</a> <a id="hourWindDir2"></a> <a>at</a> <a id="hourWindSpeed2"></a> <a>MPH</a>
+                            </li>
+                            <li>
+                                <a class="hourTime">2:00 AM</a>
+                                <img id="hourImg3" class="hourImg" src="" alt="Condition Image">
+                                <a id="hourCondition3"></a>
+                                <a id="hourTemp3" class="hourTemp"></a><a>F</a>
+                                <a class="hourWind">Wind</a> <a id="hourWindDir3"></a> <a>at</a> <a id="hourWindSpeed3"></a> <a>MPH</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
                 
             </section>
 
-            <section id="forecast" class="w3-card-4 w3-row blue w3-round w3-center" style="display:none">
+            <section id="forecast" class="w3-card-4 w3-row sectionColor w3-round w3-center" style="display:none">
                  <div id="forecastTitle">
                     <h2>Three Day Forecast</h2>
                 </div>
                 <div id="forecastSpace1" class="w3-col">
                     <p></p>
                 </div>
-                <div id="day1" class="w3-center w3-card-4 grey w3-col w3-round">
+                <!-- <div id="day1" class="w3-center w3-card-4 dataColor w3-col w3-round">
                     <p id="date1"></p>
                     <img id="img1" src="" alt="Weather Condition Image">
                     <p id="condition1"></p>
@@ -89,11 +138,11 @@
                     <p>
                         <h4>Sunset</h4> <a id="sunset1"></a>
                     </p>
-                </div>
+                </div> -->
                 <div id="forecastSpace2" class="w3-col">
                     <p></p>
                 </div>
-                <div id="day2" class="w3-center w3-card-4 grey w3-col w3-round">
+                <div id="day2" class="w3-center w3-card-4 dataColor w3-col w3-round">
                     <p id="date2"></p>
                     <img id="img2" src="" alt="Weather Condition Image">
                     <p id="condition2"></p>
@@ -116,7 +165,7 @@
                 <div id="forecastSpace3" class="w3-col">
                     <p></p>
                 </div>
-                <div id="day3" class="w3-center w3-card-4 grey w3-col w3-round">
+                <div id="day3" class="w3-center w3-card-4 dataColor w3-col w3-round">
                     <p id="date3"></p>
                     <img id="img3" src="" alt="Weather Condition Image">
                     <p id="condition3"></p>
