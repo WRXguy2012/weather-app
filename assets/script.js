@@ -1,5 +1,8 @@
 var key = '65356c91893745839f8235534231811';
 var search = document.getElementById('search');
+var homeSearch = document.getElementById('homeSearch');
+var smallSearch = document.getElementById('smallSearch');
+var locationBtn = document.getElementById('locationBtn');
 
 //function to show hourly forecast dropdown
 function hourly(id) {
@@ -102,7 +105,7 @@ var weatherAPI = function (city) {
 
 // function to call forecast api
 var forecastAPI = function (city) {
-    var forecastURL = "http://api.weatherapi.com/v1/forecast.json?&key=" + key + "&q=" + city + "&days=5";
+    var forecastURL = "http://api.weatherapi.com/v1/forecast.json?&key=" + key + "&q=" + city + "&days=3";
     fetch(forecastURL)
     .then(function (response) {
         return response.json();
@@ -562,9 +565,12 @@ var showStats = function () {
     document.getElementById('forecast').style.display = "block";
     document.getElementById('today').style.display = "block";
     document.getElementById('mapSection').style.display = "block";
+    document.getElementById('header').style.display = "block";
+    document.getElementById('headerSmall').style.display = "block";
+    document.getElementById('home').style.display = "none";
 }
 
-// button event
+// button events
 search.addEventListener("submit", function(event) {
     event.preventDefault();
     var userInput = document.querySelector('#searchInput').value;
@@ -574,3 +580,39 @@ search.addEventListener("submit", function(event) {
     showStats();
 
 });
+
+homeSearch.addEventListener("submit", function(event) {
+    event.preventDefault();
+    var userInput = document.querySelector('#homeInput').value;
+    console.log(userInput);
+    weatherAPI(userInput);
+    forecastAPI(userInput);
+    showStats();
+
+});
+
+smallSearch.addEventListener("submit", function(event) {
+    event.preventDefault();
+    var userInput = document.querySelector('#smallInput').value;
+    console.log(userInput);
+    weatherAPI(userInput);
+    forecastAPI(userInput);
+    showStats();
+
+});
+
+// get location
+var locationSearch = function () {
+    if(navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+        document.getElementById('locationError').style.display = "block";
+    }
+    function showPosition(position) {
+        var location = position.coords.latitude + "," + position.coords.longitude;
+        console.log(location);
+        weatherAPI(location);
+        forecastAPI(location);
+        showStats();
+    }
+};

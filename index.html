@@ -12,29 +12,44 @@
         <link rel="stylesheet" type="text/css" href="./assets/style.css" />
     </head>
     <body>
-        <header class="w3-cell-row headerColor w3-hide-small">
-            <div class="w3-container w3-cell">
+        <header id="header" class="w3-display-container headerColor w3-hide-small" style="display: none;">
+            <div id="desc" class="w3-left w3-cell">
                 <i class="fa fa-cloud w3-cell"></i>
                 <p id="title" class="w3-center w3-cell">Jake's Weather App</p>
             </div>
-                <form id="search" class="w3-container">
-                    <input type="text" id="searchInput" class="w3-input w3-border w3-round w3-light-grey w3-hover-grey w3-cell" placeholder="City" style="width:30%">
-                    <button type="submit" class="w3-button w3-border w3-round w3-border-grey w3-cell">submit</button>
-                </form>
-        </header>
-        <header class="w3-cell-row headerColor w3-hide-medium w3-hide-large">
-            <form id="search" class="w3-container">
-                <input type="text" id="searchInput" class="w3-input w3-border w3-round w3-light-grey w3-hover-grey w3-cell" placeholder="City" style="width:73%">
+            <form id="search" class="w3-middle">
+                <input type="text" id="searchInput" class="w3-input w3-border w3-round w3-light-grey w3-hover-grey w3-cell" placeholder="City" style="width:30%">
                 <button type="submit" class="w3-button w3-border w3-round w3-border-grey w3-cell">submit</button>
+                <button onclick="locationSearch()" id="locationBtn" type="submit" class= " fa fa-location-arrow w3-cell headerColor"></button>
+            </form>
+        </header>
+        <header id="headerSmall" class="w3-cell-row headerColor w3-hide-medium w3-hide-large" style="display: none;">
+            <form id="smallSearch" class="w3-container">
+                <input type="text" id="smallInput" class="w3-input w3-border w3-round w3-light-grey w3-hover-grey w3-cell" placeholder="City" style="width:73%">
+                <button type="submit" class="w3-button w3-border w3-round w3-border-grey w3-cell">submit</button>
+                <button onclick="locationSearch()" id="locationBtn" type="submit" class="fa fa-location-arrow headerColor w3-cell"></button>
             </form>
         </header>
 
+        <!-- <div id="locationError" class="w3-modal">
+            <div class="w3-modal-content">
+                <div class="w3-container" >
+                    <p>Can not access location</p>
+                </div>
+            </div>
+        </div> -->
+
         <main>
-            <section>
-                <!-- <div class="w3-container">
-                    <h2>Search weather forecast by city</h2>
-                </div> -->
-               
+            <section id="home" class="w3-container">
+                <div class="w3-display-middle w3-center">
+                    <h1>Jake's Weather App</h1>
+                    <p>search for local weather conditions by city, zipcode, or by current location.</p>
+                    <form id="homeSearch" class="w3-container">
+                        <input type="text" id="homeInput" class="w3-input w3-border w3-round w3-light-grey w3-hover-grey w3-cell" placeholder="City" style="width:73%">
+                        <button type="submit" class="w3-button w3-border w3-round w3-border-grey w3-cell">submit</button>
+                        <button onclick="locationSearch()" id="locationBtn" type="submit" class="fa fa-location-arrow headerColor w3-cell"></button>
+                    </form>
+                </div>
             </section>
             <section id="stats"  class="w3-card-4 sectionColor w3-round" style="display:none;">
                 <div class="w3-row">
@@ -466,33 +481,10 @@
             </section>
 
             <section id="forecast" class="w3-card-4 w3-row sectionColor w3-round w3-center" style="display:none">
-                 <div id="forecastTitle">
-                    <h2>Three Day Forecast</h2>
+                 <div id="forecastTitle" class="w3-left-align">
+                    <h2>Looking Ahead</h2>
                 </div>
                 <div id="forecastSpace1" class="w3-col">
-                    <p></p>
-                </div>
-                <!-- <div id="day1" class="w3-center w3-card-4 dataColor w3-col w3-round">
-                    <p id="date1"></p>
-                    <img id="img1" src="" alt="Weather Condition Image">
-                    <p id="condition1"></p>
-                    <p>
-                        <h4>Minimum Temp</h4> <a id="minTemp1"></a><a>F</a>
-                    </p>
-                    <p>
-                        <h4>Maximum Temp</h4> <a id="maxTemp1"></a><a>F</a>
-                    </p>
-                    <p>
-                        <h4>Chance of Rain</h4> <a id="rain1"></a><a>%</a>
-                    </p>
-                    <p>
-                        <h4>Sunrise</h4> <a id="sunrise1"></a>
-                    </p>
-                    <p>
-                        <h4>Sunset</h4> <a id="sunset1"></a>
-                    </p>
-                </div> -->
-                <div id="forecastSpace2" class="w3-col">
                     <p></p>
                 </div>
                 <div id="day2" class="w3-center w3-card-4 dataColor w3-col w3-round">

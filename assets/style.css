@@ -5,7 +5,7 @@ html {
 
 body {
     /* background-image: url('back.png'); */
-    background-color: #ffe3bb;
+    background-color: #e7dec8;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -45,15 +45,15 @@ th {
 } */
 
 .headerColor {
-    background-color: #83a2ff;
+    background-color: #30475e;
 }
 
 .sectionColor {
-    background-color: #b4bdff;
+    background-color: #cbaf87;
 }
 
 .dataColor {
-    background-color: #183e4b;
+    background-color: #7e8a97;
 }
 
 .hourTime {
@@ -75,13 +75,26 @@ th {
     padding-right: 30%;
 } */
 
+#desc {
+    width: 33%;
+}
+
 #search {
     padding-top: 10px;
     padding-bottom: 10px;
+    width: 90%;
 } 
 
 #searchInput {
     margin-top: 6px;
+}
+
+#searchSection {
+    width: 33%;
+}
+
+#locationSection {
+    width: 33%;
 }
 
 #title {
@@ -141,42 +154,42 @@ th {
 
 
 #day1 {
-    width: 18.28%;
+    width: 25%;
 }
 
 #day2 {
-    width: 18.28%;
+    width: 25%;
 }
 
 #day3 {
-    width: 18.28%;
+    width: 25%;
 }
 
 #forecast {
     margin-top: 5%;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 12%;
+    margin-right: 12%;
     padding-bottom: 5%;
 }
 
 #forecastSpace1 {
-    width: 11.28%;
-}
-
-#forecastSpace2 {
-    width: 11.28%;
+    width: 15%;
 }
 
 #forecastSpace3 {
-    width: 11.28%;
+    width: 15%;
 }
 
 #forecastSpace4 {
-    width: 11.28%;
+    width: 15%;
 }
 
 #forecastTitle {
-    padding-bottom: 5%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2.8vw;
+    font-weight: 400;
+    padding-left: 2%;
+    padding-bottom: 3%;
 }
 
 #tempLine {
