@@ -1,7 +1,11 @@
+html {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 
 body {
     /* background-image: url('back.png'); */
-    background-color: #eaeaea;
+    background-color: #ffe3bb;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -28,18 +32,24 @@ h4 {
     font-weight: 500;
 }
 
+th {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.2vw;
+    font-weight: 400;
+}
+
 /* a {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1.5vw;
+    font-size: 1.4vw;
     font-weight: 200;
 } */
 
 .headerColor {
-    background-color: #cf6747;
+    background-color: #83a2ff;
 }
 
 .sectionColor {
-    background-color: #8ba0a4;
+    background-color: #b4bdff;
 }
 
 .dataColor {
@@ -47,22 +57,23 @@ h4 {
 }
 
 .hourTime {
-    font-family: Geneva, Verdana, sans-serif;
-    font-size: 1vw;
-    font-weight: 300;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.3vw;
+    font-weight: 500;
 }
 
-.hourTemp {
+/* .hourTemp {
     padding-left: 5%;
-}
+} */
 
 .hourImg {
-    padding-left: 2%;
+    width: 6.5%;
+    height: auto;
 }
 
-.hourWind {
-    padding-left: 5%;
-}
+/* .hourWind {
+    padding-right: 30%;
+} */
 
 #search {
     padding-top: 10px;
@@ -128,25 +139,6 @@ h4 {
     padding-left: 9%;
 }
 
-#space1 {
-    width: 10%;
-}
-
-#space2 {
-    width: 10%;
-}
-
-#space3 {
-    width: 10%;
-}
-
-#space4{
-    width: 10%;
-}
-
-#space5 {
-    width: 10%;
-}
 
 #day1 {
     width: 18.28%;
@@ -202,7 +194,7 @@ h4 {
 }
 
 #today {
-    margin-top: 5%;
+    margin-top: 10%;
     margin-left: 12%;
     margin-right: 12%;   
 }
@@ -286,3 +278,56 @@ h4 {
 #percent {
     font-size: 1.2vw;
 }
+
+#hourButton {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.2vw;
+}
+
+#map { 
+   top: 3vw;
+   left: 12vw;
+  width: 75vw;
+  height: 40vw;
+}
+
+/* #pointer-data {
+  z-index: 1;
+  font-size: 20px;
+  font-weight: 900;
+  margin: 27px 0px 0px 10px;
+  color: 
+#fff;
+  text-shadow: 0px 0px 10px 
+#0007;
+top: 20%;
+bottom: 20%;
+} */
+
+#time-info {
+  width: 60vw;
+  z-index: 1;
+  margin: 10px;
+  text-shadow: 0px 0px 5px black;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding: 20px;
+}
+
+#time-text {
+  font-size: 12px;
+  font-weight: 600;
+}
+/* #mapSection {
+    width: 50%;
+    height: auto;
+    display: block;
+    margin-top: 5%;
+    margin-left: 12%;
+    margin-right: 12%;
+} */
