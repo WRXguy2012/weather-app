@@ -9,9 +9,11 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
-/* h1 {
-    text-shadow: 2px 2px white;
-} */
+h1 {
+    font-size: 4vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
 
 h2 {
     font-family: Geneva, Verdana, sans-serif;
@@ -54,6 +56,8 @@ th {
 
 .dataColor {
     background-color: #7e8a97;
+}.alertColor {
+    background-color: red;
 }
 
 .hourTime {
@@ -74,6 +78,35 @@ th {
 /* .hourWind {
     padding-right: 30%;
 } */
+
+#alertSection {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.2vw;
+    padding-left: 1%;
+
+}
+
+#titleHome {
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+
+#home {
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+#homeDesc {
+    padding-top: 10%;
+    padding-bottom: 5%;
+    font-size: 1.5vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+#descSearch {
+   
+}
 
 #desc {
     width: 33%;
