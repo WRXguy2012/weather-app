@@ -12,15 +12,15 @@
         <link rel="stylesheet" type="text/css" href="./assets/style.css" />
     </head>
     <body>
-        <header id="header" class="w3-display-container headerColor w3-hide-small" style="display: none;">
+        <header id="header" class="w3-display-container headerColor w3-hide-small w3-text-white" style="display: none;">
             <div id="desc" class="w3-left w3-cell">
                 <i class="fa fa-cloud w3-cell"></i>
                 <p id="title" class="w3-center w3-cell">Jake's Weather App</p>
             </div>
             <form id="search" class="w3-middle">
                 <input type="text" id="searchInput" class="w3-input w3-border w3-round w3-light-grey w3-hover-grey w3-cell" placeholder="City" style="width:30%">
-                <button type="submit" class="w3-button w3-border w3-round w3-border-grey w3-cell">submit</button>
-                <button onclick="locationSearch()" id="locationBtn" type="submit" class= " fa fa-location-arrow w3-cell headerColor"></button>
+                <button type="submit" class="w3-button w3-border w3-round w3-border-grey w3-light-grey w3-hover-black w3-cell">submit</button>
+                <button onclick="locationSearch()" id="locationBtn" type="submit" class= " fa fa-location-arrow w3-cell w3-light-grey w3-hover-black"></button>
             </form>
         </header>
         <header id="headerSmall" class="w3-cell-row headerColor w3-hide-medium w3-hide-large" style="display: none;">
@@ -40,22 +40,30 @@
         </div> -->
 
         <main>
-            <section id="home" class="w3-container">
-                <div id=homeTitle" class="w3-card-4 w3-round">
-                    <div id="titleHome" class="w3-container w3-center sectionColor">
-                        <h1>Jake's Weather App</h1>
-                    </div>
+            <section id="home" class="w3-center w3-panel w3-black w3-bottombar w3-border-white">
+                <div id="homeTitle">
+                    <h1>Jake's Weather App</h1>
                 </div>
-                <div id="descSearch" class="w3-card-4 w3-round dataColor">
+            </section>
+            <section id="descSearch" class="w3-display-container">
+                <div id="homeDescSearch">
                     <div id="homeDesc" class="w3-container w3-center">
-                        <p>Search for local weather conditions by city, zipcode, or by current location.</p>
+                        <p>Instant, up to date weather.</p>
+                        <p>Forecasts. Alerts. Radar. Maps.</p>
+                         <p>Any location. Any time.</p>
                     </div>
-                    <div>
-                        <form id="homeSearch" class="w3-container w3-center">
-                            <input type="text" id="homeInput" class="w3-input w3-border w3-round w3-light-grey w3-hover-grey w3-cell" placeholder="City" style="width:73%">
-                            <button type="submit" class="w3-button w3-border w3-round w3-border-grey w3-cell">submit</button>
-                            <button onclick="locationSearch()" id="locationBtn" type="submit" class="fa fa-location-arrow headerColor w3-cell"></button>
+                    <div id="homeForm">
+                        <form id="homeSearch" class="w3-center">
+                            <div id="homeInputButton" class="w3-cell-row">
+                                <input type="text" id="homeInput" class="w3-input w3-border w3-round w3-light-grey w3-hover-grey w3-cell" placeholder="City" style="width:50%">
+                                <button onclick="locationSearch()" id="locationBtn" type="submit" class="fa fa-location-arrow w3-light-grey w3-hover-black w3-cell" style="margin-left: 2%;"></button>
+                            </div>
+                            <button type="submit" class="w3-button w3-border w3-round w3-light-grey w3-hover-black w3-border-grey w3-cell" style="margin-top: 2%;">Submit</button>
                         </form>
+                    </div>
+                    <div id="credits" class="w3-right-align w3-display-bottomright">
+                        <p style="padding-right: 1%; padding-top: 1%;" >Created, designed, and coded by Jacob Lovin</p>
+                        <p style="padding-right: 1%;">Powered by <a href="https://www.weatherapi.com/" title="Free Weather API">WeatherAPI.com</a></p>
                     </div>
                 </div>
             </section>
@@ -387,7 +395,7 @@
                             </div>
                             <div id="hour12" class="w3-cell-row w3-border-top">
                                 <div class="w3-cell timeWidth">
-                                    <a class="hourTime">12:00 pm</a>
+                                    <a class="hourTime">12:00 PM</a>
                                 </div>
                                 <div class="w3-cell condWidth">
                                     <img id="hourImg12" class="hourImg" src="" alt="Condition Image">
@@ -627,6 +635,7 @@
             </section>
 
         </main>
+       
         <script src="./assets/script.js"></script>
     </body>
 </html>

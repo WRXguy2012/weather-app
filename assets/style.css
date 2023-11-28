@@ -6,14 +6,13 @@ html {
 
 body {
     /* background-image: url('back.png'); */
-    background-color: #e7dec8;
+    background-color: #84a7a1;
     background-repeat: no-repeat;
     background-size: cover;
 }
 h1 {
-    font-size: 4vw;
+    font-size: 4.5vw;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-
 }
 
 h2 {
@@ -48,15 +47,15 @@ th {
 } */
 
 .headerColor {
-    background-color: #30475e;
+    background-color: #0e2954;
 }
 
 .sectionColor {
-    background-color: #cbaf87;
+    background-color: #2e8a99;
 }
 
 .dataColor {
-    background-color: #7e8a97;
+    background-color: #1f6e8c;
 }.alertColor {
     background-color: red;
 }
@@ -103,25 +102,42 @@ th {
 
 }
 
-#titleHome {
-    padding-top: 10%;
-    padding-bottom: 10%;
-}
-
 #home {
-    padding-left: 15%;
-    padding-right: 15%;
+    height: 25vh;
+    margin: 0 0 0 0;
+
 }
 
 #homeDesc {
-    padding-top: 10%;
-    padding-bottom: 5%;
-    font-size: 1.5vw;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.8vw;
+    color: white;;
+}
+
+#homeTitle {
+    padding-top: 7vh;
+}
+
+#homeDescSearch {
+    padding-top: 2%;
 
 }
 
+#homeForm {
+    padding-top: 10%;
+    padding-left: 3%;
+}
+
+#credits {
+    padding-top: 8vw;
+    color: white;
+    font-size: 0.7vw;
+}
+
 #descSearch {
+   background-image: url('earth.jpg');
+   background-repeat: no-repeat;
+   background-size: cover;
+    height: 75vh;
    
 }
 

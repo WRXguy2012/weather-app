@@ -216,6 +216,7 @@ var showStats = function () {
     document.getElementById('header').style.display = "block";
     document.getElementById('headerSmall').style.display = "block";
     document.getElementById('home').style.display = "none";
+    document.getElementById('descSearch').style.display = "none";
 }
 
 // button events
