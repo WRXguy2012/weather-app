@@ -14,6 +14,27 @@ function hourly(id) {
     }
 }
 
+//local storage
+const ul = document.querySelector('ul');
+const searchInput = document.getElementById('searchInput');
+let storeageItems = localStorage.getItem('items') ?
+JSON.parse(localStorage.getItem('items')) : [];
+
+storeageItems.forEach(addTask);
+function addTask(text){
+  const li = document.createElement('li')
+  li.textContent = text;
+  ul.appendChild(li);
+}
+
+var storeageAdd = function(){
+    storeageItems.push(searchInput.value);
+    localStorage.setItem('items', JSON.stringify(storeageItems));
+    addTask(searchInput.value);
+    searchInput.value = '';
+  }
+
+
 //function to call map API
     maptilersdk.config.apiKey = 'biEyTcjDrAYVujwnVhhS';
     const map = (window.map = new maptilersdk.Map({
@@ -227,7 +248,7 @@ search.addEventListener("submit", function(event) {
     weatherAPI(userInput);
     forecastAPI(userInput);
     showStats();
-
+    storeageAdd();
 });
 
 homeSearch.addEventListener("submit", function(event) {

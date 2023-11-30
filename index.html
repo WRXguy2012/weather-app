@@ -17,8 +17,11 @@
                 <i class="fa fa-cloud w3-cell"></i>
                 <p id="title" class="w3-center w3-cell">Jake's Weather App</p>
             </div>
-            <form id="search" class="w3-middle">
+            <form id="search" class="w3-middle w3-dropdown-hover">
                 <input type="text" id="searchInput" class="w3-input w3-border w3-round w3-light-grey w3-hover-grey w3-cell" placeholder="City" style="width:30%">
+                    <div class="w3-dropdown-content">
+                        <ul></ul>
+                    </div>
                 <button type="submit" class="w3-button w3-border w3-round w3-border-grey w3-light-grey w3-hover-black w3-cell">submit</button>
                 <button onclick="locationSearch()" id="locationBtn" type="submit" class= " fa fa-location-arrow w3-cell w3-light-grey w3-hover-black"></button>
             </form>
@@ -30,7 +33,6 @@
                 <button onclick="locationSearch()" id="locationBtn" type="submit" class="fa fa-location-arrow headerColor w3-cell"></button>
             </form>
         </header>
-
         <!-- <div id="locationError" class="w3-modal">
             <div class="w3-modal-content">
                 <div class="w3-container" >
@@ -149,7 +151,8 @@
                         </p>
                     </div>
                 </div>
-            </section>
+            </section> 
+
             <section id="stats"  class="w3-card-4 sectionColor w3-round" style="display:none;">
                 <div class="w3-row">
                     <div id="current" class="w3-col">
