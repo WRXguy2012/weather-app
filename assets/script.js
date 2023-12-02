@@ -14,25 +14,94 @@ function hourly(id) {
     }
 }
 
-//local storage
-const ul = document.querySelector('ul');
+
+// //local storage 
 const searchInput = document.getElementById('searchInput');
-let storeageItems = localStorage.getItem('items') ?
+const homeInput = document.getElementById('homeInput');
+const smallInput = document.getElementById('smallInput');
+const storageItems = localStorage.getItem('items') ?
 JSON.parse(localStorage.getItem('items')) : [];
+console.log(storageItems);
 
-storeageItems.forEach(addTask);
-function addTask(text){
-  const li = document.createElement('li')
-  li.textContent = text;
-  ul.appendChild(li);
-}
+// storeageItems.forEach(addTask);
+// function addTask(text){
+//   const li = document.createElement('li')
+//   li.textContent = text;
+//   ul.appendChild(li);
+// }
 
-var storeageAdd = function(){
-    storeageItems.push(searchInput.value);
-    localStorage.setItem('items', JSON.stringify(storeageItems));
-    addTask(searchInput.value);
+var storageAdd = function(){
+    storageItems.push(searchInput.value);
+    storageItems.push(homeInput.value);
+    storageItems.push(smallInput.value);
+    localStorage.setItem('storageitems', JSON.stringify(storageItems));
     searchInput.value = '';
   }
+
+function autocomplete(inp, arr) {
+     var currentFocus;
+     inp.addEventListener("input", function(autoValue) {
+        var div1, div2, i, val = this.value;
+        closeAllLists();
+        if(!val) {
+            return false;
+        }
+        currentFocus = -1;
+        div1 = document.createElement("div");
+        div1.setAttribute("id", this.id + "autocomplete-list");
+        div1.setAttribute("class", "autocomplete-items");
+        this.parentNode.appendChild(div1);
+        for (i = 0; i < arr.length; i++){
+                div2 = document.createElement("div");
+                div2.innerHTML += " <input type = 'text' value = '" + arr[i] + "'>";
+                div2.addEventListener("click", function(autoValue) {
+                inp.value = this.getElementsByTagName("input")[0].value;
+                closeAllLists();
+            });
+            div1.appendChild(div2);
+        }
+    });
+
+    inp.addEventListener("keydown", function(autoValue) {
+        var acList = document.getElementById(this.id + 'autocomplete-list');
+        if (acList) acList = acList.getElementsByTagName("div");
+        if (autoValue.keyCode == 40) {
+            currentFocus++;
+            addActive(acList);
+        } else if (autoValue.keyCode == 38) {
+            currentFocus--;
+            addActive(acList);
+        }
+    });
+
+    function addActive(acList) {
+        if (!acList) return false;
+        removeActive(acList);
+        if (currentFocus >= acList.length) currentFocus = 0;
+        if (currentFocus < 0) currentFocus = (acList.length - 1);
+        acList[currentFocus].classList.add("autocomplete-active");
+    }
+    function removeActive(acList) {
+        for (var i = 0; i < acList.legnth; i++) {
+            acList[i].classList.remove("autocomplete-active");
+        }
+    }
+
+    function closeAllLists(elmnt) {
+        var acList = document.getElementsByClassName("autocomplete-items");
+        for ( var i = 0; i < acList.length; i++) {
+            if (elmnt != acList[i] && elmnt != inp) {
+                acList[i].parentNode.removeChild(acList[i]);
+            }
+        }
+    }
+
+    document.addEventListener("click", function (autoValue) {
+        closeAllLists(autoValue.target);
+    });
+}
+
+autocomplete(document.getElementById("searchInput"), storageItems);
 
 
 //function to call map API
@@ -248,7 +317,7 @@ search.addEventListener("submit", function(event) {
     weatherAPI(userInput);
     forecastAPI(userInput);
     showStats();
-    storeageAdd();
+    storageAdd();
 });
 
 homeSearch.addEventListener("submit", function(event) {
@@ -276,7 +345,7 @@ var locationSearch = function () {
     if(navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition);
     } else {
-        document.getElementById('locationError').style.display = "block";
+        document.getElementById('locationError').style.display = "block";  
     }
     function showPosition(position) {
         var location = position.coords.latitude + "," + position.coords.longitude;
